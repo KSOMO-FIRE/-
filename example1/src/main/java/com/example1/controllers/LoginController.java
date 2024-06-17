@@ -13,11 +13,11 @@ import java.util.Map;
 public class LoginController {
 
     // 模拟数据库，保存注册的用户信息（实际应用中应该存储在数据库中）
-    private Map<String, String> users = new HashMap<>();
+    private final HashMap<String, String> users = new HashMap<>();
 
     // 显示登录页面
     @GetMapping("/login")
-    public String showLoginPage(Model model) {
+    public String showLoginPage() {
         return "login";
     }
 
@@ -35,7 +35,7 @@ public class LoginController {
 
     // 显示注册页面
     @GetMapping("/register")
-    public String showRegisterPage(Model model) {
+    public String showRegisterPage() {
         return "register";
     }
 
