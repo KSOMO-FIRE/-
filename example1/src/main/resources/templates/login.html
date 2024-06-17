@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h2>Login</h2>
+<form action="/login" method="post"> <!-- 表单提交到登录接口 -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br> <!-- 输入用户名 -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br> <!-- 输入密码 -->
+    <input type="submit" value="Login"> <!-- 提交登录表单 -->
+</form>
+<p th:text="${message}"></p> <!-- 显示登录消息 -->
+
+<p>Don't have an account? <a href="/register">Register here</a></p> <!-- 添加注册链接 -->
+</body>
+</html>
